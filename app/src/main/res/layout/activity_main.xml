@@ -40,7 +40,7 @@
         android:text="Follow"
         app:layout_constraintEnd_toStartOf="@+id/MessageButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/Discription" />
 
     <Button
         android:id="@+id/MessageButton"
@@ -52,10 +52,10 @@
         android:text="message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/FollowButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/Discription" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="103dp"
@@ -70,12 +70,15 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Discription"
         android:layout_width="408dp"
         android:layout_height="60dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="4dp"
-        android:text="Practical 2 is hard"
+        android:layout_marginEnd="2dp"
+        android:text="MAD Practical 2"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

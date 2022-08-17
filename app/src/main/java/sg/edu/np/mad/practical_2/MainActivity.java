@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,9 +17,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final int[] follow = {1};
         Button MyMessageButton = findViewById(R.id.MessageButton);
         Button MyFollowButton = findViewById(R.id.FollowButton);
+        TextView MyName = findViewById(R.id.Name);
+        TextView MyDiscription = findViewById(R.id.Discription);
+
         MyMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.v(TAG, "Message button pressed");
             }
         });
+
         MyFollowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
