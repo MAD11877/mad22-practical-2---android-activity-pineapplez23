@@ -19,8 +19,15 @@ public class MainActivity extends AppCompatActivity {
 
         Button MyMessageButton = findViewById(R.id.MessageButton);
         Button MyFollowButton = findViewById(R.id.FollowButton);
+        User MyUser = new User();
+        MyUser.setName("MAD practical 2");
+        MyUser.setDescription("App for practical 2");
         TextView MyName = findViewById(R.id.Name);
-        TextView MyDiscription = findViewById(R.id.Discription);
+        TextView MyDescription = findViewById(R.id.Discription);
+
+        MyName.setText(MyUser.getName());
+        MyDescription.setText(MyUser.getDescription());
+
 
         MyMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                MyFollowButton.setText("Unfollow");
-                Log.v(TAG, "Follow button pressed");
+                MyFollowButton.setText("unfollow");
             }
 
         });
