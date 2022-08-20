@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         User MyUser = new User();
         MyUser.setName("MAD practical 2");
         MyUser.setDescription("App for practical 2");
+        MyUser.setFollowed(false);
         TextView MyName = findViewById(R.id.Name);
         TextView MyDescription = findViewById(R.id.Discription);
 
@@ -39,11 +40,18 @@ public class MainActivity extends AppCompatActivity {
 
         MyFollowButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
-                MyFollowButton.setText("unfollow");
+            public void onClick(View view) {
+                if (MyUser.isFollowed() == false)
+                {
+                    MyFollowButton.setText("Follow");
+                    MyUser.setFollowed(true);
+                }
+                else
+                {
+                    MyFollowButton.setText("Unfollow");
+                    MyUser.setFollowed(false);
+                }
             }
-
         });
 
     }
